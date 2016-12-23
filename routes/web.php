@@ -23,6 +23,6 @@ Route::post('/fazeres', function(){
     return \App\Fazer::create(\Illuminate\Support\Facades\Input::all());
 });
 
-Route::patch('/fazeres/{id}', function($id){
+Route::any('/fazeres/{id}', function($id){
     return \App\Fazer::where('id', $id)->update(['Feito'=>1]);
 });

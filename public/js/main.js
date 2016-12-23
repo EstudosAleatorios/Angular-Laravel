@@ -23,10 +23,7 @@ function ListaControlador($scope, $http) {
     $scope.mudarStatus = function($id)
     {
         console.log($id);
-        $http.put('/fazeres/' + $id).success(function($id)
-        {
-            return $id;
-        });
+        $http.put('/fazeres/' + $id);
     }
 
     $scope.addFazer = function () {
